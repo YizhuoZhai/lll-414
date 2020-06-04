@@ -1,13 +1,7 @@
-For building with llvm toolchain (tested with 3.4.2, 3.8, 3.9)
+For building with llvm toolchain (tested with 3.4.2, 3.8, 3.9, 4.14)
 ```
-make ARCH=x86_64 CC=clang defconfig
-make ARCH=x86_64 CC=clang
+make ARCH=x86_64 CC=clang allyesconfig
+make ARCH=x86_64 CC=/dir/to/clang-emit-bc.sh
 ```
-
-Optionally:
-```
-HOSTCC=clang KBUILD_OUTPUT=build-dir
-```
-
-Now `allyesconfig` is fine, except KASAN.
+Now `allyesconfig` is fine, except KASAN, for statc analysis, please diable KCOV and MODVERSIONS.
 
