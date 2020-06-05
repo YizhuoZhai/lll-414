@@ -7,6 +7,5 @@ Disable the KASAN, KCOV and MODVERSIONS
 ```
 make ARCH=x86_64 CC=/dir/to/clang-emit-bc.sh
 ```
-The bitcode files are under each directory with suffix ```llbc```
 
 
